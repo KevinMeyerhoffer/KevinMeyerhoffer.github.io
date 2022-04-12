@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&display=swap");
+body {
+  max-width: 1500px;
+  /* justify-content: center; */
+  margin: 0 auto;
+  font-family: "Roboto Mono", monospace;
+}
+section.hero-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.hero-wrapper__left {
+  display: block;
+  display: flex;
+  align-self: flex-end;
+  background-color: rgba(83, 150, 123);
+  width: calc(100vw / 3);
+  height: 95%;
+  position: relative;
+}
+
+.hero-wrapper__left img {
+  position: absolute;
+  width: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100vw / 10);
+  width: 320px;
+  filter: grayscale(100%);
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+  /* position: relative; */
+}
+
+.img-card {
+  position: absolute;
+  width: 120%;
+  top: 50%;
+  background-color: yellowgreen;
+}
+
+.hero-wrapper__right {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  justify-content: flex-end;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  /* right: 5%; */
+  padding: 50px;
+  cursor: pointer;
+  /* border: 1px solid #6bab90; */
+}
+
+p::before {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 2.5em;
+  background-color: rgba(83, 150, 123, 0.7);
+  margin-right: 0.1rem;
+  transform: translateY(-50%);
+  transition: ease 0.5s;
+}
+p:hover::before {
+  width: 6em;
+}
+
+h1 {
+  /* border: 5px solid #6bab90; */
+  width: 430px;
+  font-size: 2.5em;
+  letter-spacing: -0.05em;
+  line-height: 1.5em;
+  margin-right: 15%;
+  position: relative;
+}
+h1::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 0.7em;
+  width: 100%;
+  background-color: rgba(83, 150, 123, 0.3);
+  margin-right: 0.1rem;
+  bottom: 6px;
+  left: -10px;
+}
+
+.hero-social {
+  margin-right: 10px;
+  writing-mode: tb-rl;
+  text-orientation: mixed;
+  word-spacing: 40px;
+  transition: 0.2s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
