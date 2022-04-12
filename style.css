@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&display=swap");
 body {
   max-width: 1500px;
-  /* justify-content: center; */
   margin: 0 auto;
   font-family: "Roboto Mono", monospace;
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
 }
 section.hero-wrapper {
   display: flex;
@@ -34,24 +34,17 @@ section.hero-wrapper {
   /* position: relative; */
 }
 
-.img-card {
-  position: absolute;
-  width: 120%;
-  top: 50%;
-  background-color: yellowgreen;
-}
-
 .hero-wrapper__right {
   display: block;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   position: relative;
-  justify-content: flex-end;
 }
 
-p {
+.hero-name {
   position: absolute;
   top: 0;
   /* right: 5%; */
@@ -60,7 +53,7 @@ p {
   /* border: 1px solid #6bab90; */
 }
 
-p::before {
+.hero-name::before {
   display: inline-block;
   content: "";
   height: 1px;
@@ -70,8 +63,12 @@ p::before {
   transform: translateY(-50%);
   transition: ease 0.5s;
 }
-p:hover::before {
+.hero-name:hover::before {
   width: 6em;
+}
+
+.hero-follow {
+  margin-right: 12em;
 }
 
 h1 {
@@ -96,7 +93,8 @@ h1::after {
 }
 
 .hero-social {
-  margin-right: 10px;
+  position: absolute;
+  right: 30px;
   writing-mode: tb-rl;
   text-orientation: mixed;
   word-spacing: 40px;
