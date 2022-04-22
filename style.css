@@ -8,8 +8,8 @@ body {
   max-width: 2000px;
   margin: 0 auto;
   transition: 0.3s ease-in;
-
-  /* background-color: rgb(177, 177, 177); */
+  color: black;
+  background-color: white;
 }
 section.hero-wrapper {
   display: flex;
